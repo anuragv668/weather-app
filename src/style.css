@@ -3,3 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template: 1.5fr 8fr 1fr / 1fr;
+  background-color: #9681EB;
+}
+
+header,
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  background-color: #6527BE;
+}
