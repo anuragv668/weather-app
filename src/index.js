@@ -12,19 +12,25 @@ const searchBtn = document.getElementById('searchBtn');
 const searchBox = document.getElementById('searchBox');
 
 let fetcher = async (unit, locations) => {
-  const fetched = await fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${locations}`, {mode: 'cors'})
-  const response = await fetched.json();
-  const place = `${response.location.name}, ${response.location.country}`;
-  const tempc = `${response.current.temp_c}`;
-  const tempf = `${response.current.temp_f}`;
-  const time = `${response.current.last_updated}`;
+  try {
+    const fetched = await fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${locations}`, {mode: 'cors'})
+    const response = await fetched.json();
+    const place = `${response.location.name}, ${response.location.country}`;
+    const tempc = `${response.current.temp_c}`;
+    const tempf = `${response.current.temp_f}`;
+    const time = `${response.current.last_updated}`;
 
-  datetime.textContent = time;
-  location.textContent = place;
-  if (unit === 'celsius') {
-    temperature.textContent = `${tempc}°C`;
-  } else {
-  temperature.textContent = `${tempf}°F`
+    datetime.textContent = time;
+    location.textContent = place;
+    if (unit === 'celsius') {
+      temperature.textContent = `${tempc}°C`;
+    } else {
+    temperature.textContent = `${tempf}°F`
+    }
+  } catch(error) {
+    temperature.textContent = `x`;
+    datetime.textContent = `enter valid data`;
+    location.textContent = `invalid location`;
   }
 }
 
