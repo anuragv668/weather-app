@@ -8,8 +8,9 @@ body {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template: 1.5fr 8fr 1fr / 1fr;
-  background-color: #9681EB;
+  grid-template: 1.4fr 8fr 0.8fr / 1fr;
+  background-color: #040D12;
+  color: white;
 }
 
 header,
@@ -20,5 +21,29 @@ footer{
 }
 
 header {
-  background-color: #6527BE;
+  background-color: #183D3D;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+a, a:visited {
+  color: white;
+}
+
+section {
+  padding: 30px;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#result-container {
+  height: 400px;
+  width: 400px;
+  background-color: #183D3D;
+  border-radius: 20px;
+  padding: 30px;
 }
