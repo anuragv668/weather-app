@@ -63,3 +63,18 @@ section {
 .temperature{
   font-size: 6rem;
 }
+
+#searchBox:focus {
+  outline: none;
+}
+
+#searchBtn,
+#tempUnit {
+  background-color: #183D3D;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+}
+
+
