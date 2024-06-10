@@ -46,4 +46,20 @@ section {
   background-color: #183D3D;
   border-radius: 20px;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.location {
+  font-size: 2rem;
+}
+
+.datetime{
+  font-size: 2rem;
+}
+
+.temperature{
+  font-size: 6rem;
 }
